@@ -1,9 +1,16 @@
 <h1>Ajax#home</h1>
 <p>Find me in app/views/ajax/home.html.erb</p>
+
 <button id="list-todos" type="button">List todos</button><br>
+
 <label>title</label><input id="todo-title"><label>created by</label>
 <input id="todo-created-by"><button id="create-todo" type="button">Create todo</button><br>
+
+
+
+
 <div id="results-div"></div>
+
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM fully loaded and parsed');
@@ -33,6 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const createTodoButton = document.getElementById('create-todo');
   const todoTitle = document.getElementById('todo-title');
   const todoCreatedBy = document.getElementById('todo-created-by')
+
   createTodoButton.addEventListener('click', (event) => {
     var eventRequest = new XMLHttpRequest();
     eventRequest.onreadystatechange = function () {
@@ -51,4 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     eventRequest.send(dataToSend);
   });
 });
+
+
+
 </script>
